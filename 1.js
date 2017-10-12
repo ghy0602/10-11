@@ -1,5 +1,5 @@
 
-var box = document.getElementsByTagName('div');
+var box = document.getElementsByTagName('div')[0];
 box.addEventListener('mousedown',down);
 function down(ev){
 	var disX = ev.clientX - this.offsetLeft;
