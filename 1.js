@@ -1,3 +1,4 @@
+
 var box = document.getElementsByTagName('div');
 box.addEventListener('mousedown',down);
 function down(ev){
@@ -8,5 +9,11 @@ function down(ev){
 	function move(ev){
 		box.style.left = ev.clientX - disX + 'px';
 		box.style.top = ev.clientY - disY + 'px';
+	}
+
+	document.addEventListener('mouseup',up);
+	function up(){
+		document.removeEventListener('mousemove',move);
+		document.removeEventListener('mouseup',up);
 	}
 }
